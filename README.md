@@ -1,1 +1,1 @@
-Very small project for uni
+Little project for uni featuring two examples for cookie banners

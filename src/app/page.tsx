@@ -1,8 +1,3 @@
-/**
- * File: ./page.tsx
- * 
- */
-
 import CookieBannerGood from "./cookies/good/banner"
 import CookieBannerBad from "./cookies/bad/banner"
 

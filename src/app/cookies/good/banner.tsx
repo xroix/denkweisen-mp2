@@ -1,8 +1,3 @@
-/**
- * File: ./cookies/good/banner.tsx
- * 
- */
-
 "use client";
 
 import * as React from "react";

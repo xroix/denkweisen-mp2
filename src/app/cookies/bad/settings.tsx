@@ -1,8 +1,3 @@
-/**
- * File: ./cookies/bad/settings.tsx
- * 
- */
-
 "use client";
 
 import * as React from "react";
@@ -10,7 +5,6 @@ import * as React from "react";
 import { Button } from "@/components/ui/button"
 import {
     Dialog,
-    DialogClose,
     DialogContent,
     DialogDescription,
     DialogFooter,
@@ -26,12 +20,8 @@ import {
 } from "@/components/ui/accordion"
 import {
     Card,
-    CardAction,
     CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
+    CardFooter
 } from "@/components/ui/card"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label";
