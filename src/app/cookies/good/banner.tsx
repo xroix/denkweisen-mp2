@@ -1,0 +1,60 @@
+/**
+ * File: ./cookies/good/banner.tsx
+ * 
+ */
+
+"use client";
+
+import * as React from "react";
+import CookieSettings from "./settings"
+
+import {Button} from "@/components/ui/button"
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+
+
+export default function CookieBannerGood() {
+    const [open, setOpen] = React.useState(false);
+
+    return (
+        <Dialog open={open} onOpenChange={setOpen}>
+            <DialogTrigger asChild>
+                <Button variant="outline">Gutes Beispiel anzeigen</Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px] [&>button:last-child]:hidden"
+                            onEscapeKeyDown={(e) => e.preventDefault()}
+                            onPointerDownOutside={(e) => e.preventDefault()}
+                            onInteractOutside={(e) => e.preventDefault()}>
+                <form onSubmit={(event) => {
+                    setOpen(false);
+                    event.preventDefault();
+                }}>
+                    <DialogHeader>
+                        <DialogTitle>Diese Webseite verwendet Cookies</DialogTitle>
+                        <DialogDescription>
+                            So können wir für Sie unsere Webseite verbessern, maßgeschnitte Inhalte bereitstellen und das Benutzeraufkommen analysieren. 
+                        </DialogDescription>
+                        <DialogDescription>
+                            Weitere Information finden Sie in <a href="#" className="underline text-blue-500 hover:text-blue-700 visited:text-purple-700">unsererer Datenschutzbestimmungen</a>.
+                        </DialogDescription>
+                    </DialogHeader>
+                    <DialogFooter className="mt-8 sm:flex-col">
+                        <Button type="submit">Akzeptieren</Button>
+                        <DialogClose asChild>
+                            <Button>Nur Notwendige</Button>
+                        </DialogClose>
+                        <CookieSettings parentSetOpen={setOpen}/>
+                    </DialogFooter>
+                </form>
+            </DialogContent>
+        </Dialog>
+    )
+}

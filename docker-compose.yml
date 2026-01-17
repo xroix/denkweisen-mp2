@@ -1,0 +1,13 @@
+services:
+  next-app:
+    container_name: denkweisen-mp2
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    restart: always
+    ports:
+      - 3000:3000

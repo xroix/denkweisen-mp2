@@ -12,13 +12,14 @@ import {
 import {Input} from "@/components/ui/input"
 import {Label} from "@/components/ui/label"
 
-import CookieBanner from "./cookies/banner"
+import CookieBannerGood from "./cookies/good/banner"
+import CookieBannerBad from "./cookies/bad/banner"
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center">
-            <h1 className="text-2xl font-bold mb-4">Hello World</h1>
-            <CookieBanner/>
+        <main className="flex min-h-screen flex-col items-center justify-center gap-5">
+            <CookieBannerGood/>
+            <CookieBannerBad/>
         </main>
     );
 }
